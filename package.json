@@ -1,0 +1,19 @@
+{
+  "name": "konomi-redteam",
+  "version": "0.1.0",
+  "description": "A red-team taxonomy classified by the property exploited, a collapse corpus recorded as signatures rather than payloads, and a gate on the suite itself.",
+  "type": "module",
+  "main": "corpus.mjs",
+  "exports": {
+    ".": "./corpus.mjs",
+    "./pressure": "./pressure.mjs",
+    "./collapse": "./collapse.mjs",
+    "./fold": "./fold.mjs"
+  },
+  "files": ["pressure.mjs", "collapse.mjs", "corpus.mjs", "fold.mjs", "seed.mjs", "README.md", "LICENSE"],
+  "scripts": { "test": "node test.mjs" },
+  "keywords": ["red-team", "ai-safety", "llm-evaluation", "taxonomy", "adversarial", "mutation-testing"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/sjgant80-hub/konomi-redteam.git" },
+  "homepage": "https://sjgant80-hub.github.io/konomi-redteam/"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "mutation": "< → <=",
+    "snippet": "let rem = typeof n === 'bigint' ? (n < 0n ? -n : n) : BigInt(Math.floor(Math.abs(Number(n)",
+    "reason": "fold.mjs:53 — BigInt has no signed zero: at n === 0n the negation branch yields -0n which is === 0n, so widening the comparison selects a different branch with an identical value."
+  },
+  {
+    "mutation": "< → <=",
+    "snippet": "if (rem < 1n) return S;",
+    "reason": "fold.mjs:54 — At rem === 1n the mutant returns the zero state immediately; the original falls through, finds no spine prime dividing 1, and returns that same zero state because rem === 1n. Same output on the only differing input."
+  },
+  {
+    "mutation": "=== → !==",
+    "snippet": "//   that loses NOTHING — vector(number(v)) === v, always.",
+    "reason": "fold.mjs:18 — The mutated text is inside a comment and has no executable effect."
+  }
+]
